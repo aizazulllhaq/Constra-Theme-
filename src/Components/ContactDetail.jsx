@@ -16,7 +16,8 @@ const ContactDetail = () => {
         {/* Upper Section  */}
         <div className="upper w-[100%] bg-gray-200 py-[7px]">
           <div className="max-w-[1070px] mx-auto flex sm:justify-between justify-center items-center sm:flex-nowrap flex-wrap sm:px-[10px] md:px-0 px-[20px] space-y-3">
-            <div className="left sm:pr-0 pr-[20px]">
+            <div className="left sm:pr-0 pr-[20px] flex">
+             <p className="pr-[10px]">📍</p>
               <p>9051 Constra Incorporate, USA</p>
             </div>
             <div className="right">
@@ -69,14 +70,20 @@ const ContactDetail = () => {
         {/* Down Section  */}
 
         <div className="w-[100%] bg-white">
-          <div className="down max-w-[1170px] mx-auto grid sm:grid-cols-[30%_auto] py-[30px] grid-cols-1">
-            <div className="left sm:text-5xl font-extrabold sm:pl-[20px] sm:text-left text-center">Constra</div>
-            <div className="right grid sm:grid-cols-4 grid-cols-1 sm:pl-[100px] text-center">
-              <div className="sm:py-0 py-[10px]">
-                <h3 className="text-sm">Call Us</h3>
+          <div className="down max-w-[1170px] mx-auto grid lg:grid-cols-[30%_auto] py-[30px] grid-cols-1">
+            <div className="left sm:pl-[20px] md:text-left text-center">
+              <img
+                src="https://demo.themefisher.com/constra-bootstrap/images/logo.png"
+                className="max-w-[200px] mx-auto md:pb-0 pb-[20px]"
+                alt=""
+              />
+            </div>
+            <div className="right grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 sm:pl-[100px] text-center">
+              <div className="sm:py-0 py-[10px] md:mb-0 mb-[10px]">
+                <h3 className="text-sm ">Call Us</h3>
                 <p className="font-bold">(+9) 847-291-4353</p>
               </div>
-              <div className="sm:py-0 py-[10px]">
+              <div className="sm:py-0 py-[10px] md:mb-0 mb-[10px]">
                 <h3 className="text-sm">Email Us</h3>
                 <p className="font-bold">office@Constra.com</p>
               </div>
@@ -85,7 +92,9 @@ const ContactDetail = () => {
                 <p className="font-bold">ISO 9001:2017</p>
               </div>
               <div className="sm:py-0 py-[10px]">
-                <button className="font-bold text-white bg-[#ffb600] py-[10px] px-[15px] rounded-[3px]">Get A Quote</button>
+                <button className="font-bold text-white bg-[#ffb600] py-[10px] px-[15px] rounded-[3px]">
+                  Get A Quote
+                </button>
               </div>
             </div>
           </div>
