@@ -27,10 +27,10 @@ const AboutUs = () => {
         {/* About Us Section Start  */}
 
         {/* About Us two major section  */}
-        <div className="grid sm:grid-cols-2 pt-[120px]">
-          <div className="left pl-[130px]">
+        <div className="grid md:grid-cols-2 grid-cols-1 pt-[120px]">
+          <div className="left md:pl-[130px] max-w-[500px] mx-auto px-[20px]">
             <h4 className="text-xl font-thin pb-[10px]">ABOUT US</h4>
-            <h1 className="font-extrabold text-4xl pb-[20px] opacity-80">
+            <h1 className="font-extrabold md:text-3xl text-2xl pb-[20px] opacity-80">
               WE DELIVER LANDMARK PROJECTS
             </h1>
             <p className="text-md opacity-85 pb-[20px]">
@@ -43,36 +43,36 @@ const AboutUs = () => {
             <div className="services grid grid-cols-2">
               <div className="py-[20px]">
                 <div className="pb-[50px] flex">
-                  <h1 className="text-4xl opacity-80 pr-[10px]">🏆</h1>
-                  <h1 className="text-[18px] font-bold opacity-80">
+                  <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">🏆</h1>
+                  <h1 className="lg:text-[18px] text-[12px] font-bold opacity-80">
                     WE'VE REPUTION FOR EXELLENCE
                   </h1>
                 </div>
                 <div className="pb-[50px] flex">
-                  <h1 className="text-4xl opacity-80 pr-[10px]">🏆</h1>
-                  <h1 className="text-[18px] font-bold opacity-80">
+                <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">🏆</h1>
+                <h1 className="lg:text-[18px] text-[12px] font-bold opacity-80">
                     GUIDED BY COMMITMENT
                   </h1>
                 </div>
               </div>
               <div className="py-[20px]">
                 <div className="pb-[50px] flex">
-                  <h1 className="text-4xl opacity-80 pr-[10px]">🏆</h1>
-                  <h1 className="text-[18px] font-bold opacity-80">
+                <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">🏆</h1>
+                <h1 className="lg:text-[18px] text-[12px] font-bold opacity-80">
                     WE BUILD PARTNERSHIPS
                   </h1>
                 </div>
                 <div className="pb-[50px] flex">
-                  <h1 className="text-4xl opacity-80 pr-[10px]">🏆</h1>
-                  <h1 className="text-[18px] font-bold opacity-80">
+                <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">🏆</h1>
+                <h1 className="lg:text-[18px] text-[12px] font-bold opacity-80">
                     A TEAM OF PROFESSIONALS
                   </h1>
                 </div>
               </div>
             </div>
           </div>
-          <div className="right pr-[109px] pt-[15px]">
-            <h4 className="font-extrabold text-4xl pb-[20px] opacity-80 ">
+          <div className="right max-w-[500px] mx-auto px-[20px]">
+            <h4 className="font-extrabold md:text-3xl text-2xl pb-[20px] opacity-80 ">
               OUR VALUES
             </h4>
             <p className="text-md opacity-85 pb-[20px] pl-[5px]">
@@ -159,7 +159,7 @@ const AboutUs = () => {
 
         {/* About us last Detail section  */}
         <div className="detail max-w-[100%] mx-auto bg-[#252525]">
-          <div className="max-w-[900px] mx-auto flex sm:flex-nowrap flex-wrap justify-between py-[50px] text-white">
+          <div className="max-w-[900px] mx-auto flex sm:flex-nowrap flex-wrap sm:flex-row lg:justify-between py-[50px] text-white flex-col justify-center text-center">
             <div className="total-projects pr-[10px]">
               <img
                 src="https://demo.themefisher.com/constra-bootstrap/images/icon-image/fact1.png"

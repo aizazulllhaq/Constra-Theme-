@@ -1,3 +1,5 @@
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
@@ -8,6 +10,7 @@ const Navbar = () => {
   const [servicesDropdown, setServicesDropdown] = useState(false);
   const [featuresDropdown, setFeaturesDropdown] = useState(false);
   const [newsDropdown, setNewsDropdown] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -60,50 +63,59 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-[100%] py-[20px] md:px-0 px-[10px] bg-gray-900 text-white ${
+      className={`w-full py-2 bg-gray-900 text-white ${
         isScrolled ? "fixed top-0 left-0 z-50 shadow-lg" : "relative"
       }`}
     >
-      <div className="max-w-[1170px] mx-auto grid md:grid-cols-[70%_auto] grid-cols-1">
+      <div className="max-w-[1170px] mx-auto grid md:grid-cols-[70%_auto] grid-cols-[50%_50%] items-center">
         <div className="left relative">
-          <ul className="flex md:space-x-[30px] space-x-[15px] font-semibold">
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-xl sm:text-white bg-yellow-500 md:px-0 px-1 md:py-0 py-1 absolute left-[8%] top-1/2 transform -translate-y-1/2 cursor-pointer md:hidden"
+          >
+            <FontAwesomeIcon icon={open ? faTimes : faBars} size="lg" />
+          </button>
+          <ul
+            className={`md:flex md:space-x-5 justify-end md:text-xl text-md md:static py-2 font-semibold ${
+              open ? "block mt-5 absolute top-0 left-0 bg-gray-900 w-[750px] pl-[50px]" : "hidden"
+            } md:block`}
+          >
             <li
-              className="relative hover:text-yellow-500 cursor-pointer"
+              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[20px] text-[15px]"
               onMouseEnter={toggleHomeDropdown}
               onMouseLeave={closeDropdown}
             >
               HOME
               {homeDropdown && (
-                <div className="absolute top-full left-0  py-2 w-full text-white shadow-lg z-[10]">
-                  <ul className="flex flex-col space-y-2 bg-white w-[120px] py-[15px] items-center ">
-                    <li className="text-black hover:text-yellow-400 border-b-[1px] border-b-gray-400 py-[5px]">
+                <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
+                  <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
+                    <li className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
                       Home One
                     </li>
                     <li className="text-black hover:text-yellow-400">
                       Home Two
                     </li>
-                    {/* Add more sublinks as needed */}
                   </ul>
                 </div>
               )}
             </li>
             <li
-              className="relative hover:text-yellow-500 cursor-pointer"
+              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[20px] text-[15px]"
               onMouseEnter={toggleCompanyDropdown}
               onMouseLeave={closeDropdown}
             >
-              Company
+              COMPANY
               {companyDropdown && (
-                <div className="absolute top-full left-0  py-2 w-full text-white shadow-lg z-[10]">
-                  <ul className="flex flex-col space-y-2 bg-white w-[120px] py-[15px] pl-[20px] ">
-                    <li className="text-black hover:text-yellow-400 border-b-[1px] border-b-gray-400 py-[5px]">
+                <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
+                  <ul className="flex flex-col space-y-2 bg-white w-28 py-3 pl-5">
+                    <li className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
                       About Us
                     </li>
                     <li className="text-black hover:text-yellow-400">
                       Our People
                     </li>
                     <li className="text-black hover:text-yellow-400">
-                      Testominols
+                      Testimonials
                     </li>
                     <li className="text-black hover:text-yellow-400">FAQs</li>
                     <li className="text-black hover:text-yellow-400">
@@ -114,22 +126,22 @@ const Navbar = () => {
               )}
             </li>
             <li
-              className="relative hover:text-yellow-500 cursor-pointer"
+              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[20px] text-[15px]"
               onMouseEnter={toggleProjectsDropdown}
               onMouseLeave={closeDropdown}
             >
               PROJECTS
               {projectsDropdown && (
-                <div className="absolute top-full left-0  py-2 w-full text-white shadow-lg z-[10]">
-                  <ul className="flex flex-col space-y-2 bg-white w-[120px] py-[15px] items-center ">
-                    <li className="text-black hover:text-yellow-400 border-b-[1px] border-b-gray-400 py-[5px]">
+                <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
+                  <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
+                    <li className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
                       About Us
                     </li>
                     <li className="text-black hover:text-yellow-400">
                       Our People
                     </li>
                     <li className="text-black hover:text-yellow-400">
-                      Testominols
+                      Testimonials
                     </li>
                     <li className="text-black hover:text-yellow-400">FAQs</li>
                     <li className="text-black hover:text-yellow-400">
@@ -140,22 +152,22 @@ const Navbar = () => {
               )}
             </li>
             <li
-              className="relative hover:text-yellow-500 cursor-pointer"
+              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[20px] text-[15px]"
               onMouseEnter={toggleServicesDropdown}
               onMouseLeave={closeDropdown}
             >
               SERVICES
               {servicesDropdown && (
-                <div className="absolute top-full left-0  py-2 w-full text-white shadow-lg z-[10]">
-                  <ul className="flex flex-col space-y-2 bg-white w-[120px] py-[15px] items-center ">
-                    <li className="text-black hover:text-yellow-400 border-b-[1px] border-b-gray-400 py-[5px]">
+                <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
+                  <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
+                    <li className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
                       About Us
                     </li>
                     <li className="text-black hover:text-yellow-400">
                       Our People
                     </li>
                     <li className="text-black hover:text-yellow-400">
-                      Testominols
+                      Testimonials
                     </li>
                     <li className="text-black hover:text-yellow-400">FAQs</li>
                     <li className="text-black hover:text-yellow-400">
@@ -166,22 +178,22 @@ const Navbar = () => {
               )}
             </li>
             <li
-              className="relative hover:text-yellow-500 cursor-pointer"
+              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[20px] text-[15px]"
               onMouseEnter={toggleFeaturesDropdown}
               onMouseLeave={closeDropdown}
             >
               FEATURES
               {featuresDropdown && (
-                <div className="absolute top-full left-0  py-2 w-full text-white shadow-lg z-[10]">
-                  <ul className="flex flex-col space-y-2 bg-white w-[120px] py-[15px] items-center ">
-                    <li className="text-black hover:text-yellow-400 border-b-[1px] border-b-gray-400 py-[5px]">
+                <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
+                  <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
+                    <li className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
                       About Us
                     </li>
                     <li className="text-black hover:text-yellow-400">
                       Our People
                     </li>
                     <li className="text-black hover:text-yellow-400">
-                      Testominols
+                      Testimonials
                     </li>
                     <li className="text-black hover:text-yellow-400">FAQs</li>
                     <li className="text-black hover:text-yellow-400">
@@ -192,22 +204,22 @@ const Navbar = () => {
               )}
             </li>
             <li
-              className="relative hover:text-yellow-500 cursor-pointer"
+              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[20px] text-[15px]"
               onMouseEnter={toggleNewsDropdown}
               onMouseLeave={closeDropdown}
             >
               NEWS
               {newsDropdown && (
-                <div className="absolute top-full left-0  py-2 w-full text-white shadow-lg z-[10]">
-                  <ul className="flex flex-col space-y-2 bg-white w-[120px] py-[15px] items-center ">
-                    <li className="text-black hover:text-yellow-400 border-b-[1px] border-b-gray-400 py-[5px]">
+                <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
+                  <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
+                    <li className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
                       About Us
                     </li>
                     <li className="text-black hover:text-yellow-400">
                       Our People
                     </li>
                     <li className="text-black hover:text-yellow-400">
-                      Testominols
+                      Testimonials
                     </li>
                     <li className="text-black hover:text-yellow-400">FAQs</li>
                     <li className="text-black hover:text-yellow-400">
@@ -217,11 +229,11 @@ const Navbar = () => {
                 </div>
               )}
             </li>
-            <li className="hover:text-yellow-400">CONTACT</li>
+            <li className="hover:text-yellow-400 md:py-0 py-2 lg:text-[20px] text-[15px]">CONTACT</li>
           </ul>
         </div>
 
-        <div className="right text-end text-[22px]">🔍</div>
+        <div className="right text-end md:pr-2 mr-[30px] lg:text-[25px] text-[20px]">🔍</div>
       </div>
     </nav>
   );
