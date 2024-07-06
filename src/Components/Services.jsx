@@ -5,8 +5,8 @@ const Services = () => {
     <section className="w-[100%]">
       <div className="max-w-[1170px] mx-auto">
         <div className="heading text-center py-[60px]">
-          <h3 className="text-xl font-light pt-[20px]">WE ARE SPECIALIST IN</h3>
-          <h1 className="text-4xl font-extrabold opacity-80">WHAT WE DO</h1>
+          <h3 className="md:text-xl text-md font-light pt-[20px]">WE ARE SPECIALIST IN</h3>
+          <h1 className="lg:text-4xl md:text-3xl text-2xl font-extrabold opacity-80">WHAT WE DO</h1>
         </div>
 
         <div className="banner grid md:grid-cols-3 grid-cols-1">
@@ -45,7 +45,7 @@ const Services = () => {
           <div className="center">
             <img src="https://demo.themefisher.com/constra-bootstrap/images/services/service-center.jpg" alt="" />
           </div>
-          <div className="right py-[30px] pr-[20px]">
+          <div className="right py-[30px] pr-[20px] md:px-0 px-[20px]">
             <div className="flex mb-[40px]">
               <img alt="" src="https://demo.themefisher.com/constra-bootstrap/images/icon-image/service-icon4.png" className="h-[60px]"/>
               <div className="px-[30px]">

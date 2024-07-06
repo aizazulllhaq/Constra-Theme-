@@ -62,14 +62,14 @@ const Main = () => {
     switch (slide.id) {
       case 1:
         return (
-          <div className="absolute bottom-[30%] md:left-[10%] left-[20%] max-w-[60%] md:max-w-[80%] mx-auto text-white p-4 text-center">
+          <div className="absolute bottom-[30%] md:left-[20%] left-[20%] max-w-[60%] md:max-w-[80%] mx-auto text-white p-4 text-center">
             <p className="md:text-5xl sm:text-3xl text-xl font-thin ">{slide.upperSmHeading}</p>
             <h2 className="md:text-6xl sm:text-3xl text-2xl font-extrabold py-[18px]">{slide.centerLgHeading}</h2>
             <div className="mt-4">
-              <button className="bg-yellow-500 text-white py-3 px-4 mr-4 rounded-[5px] font-bold">
+              <button className="bg-yellow-500 text-white py-3 px-4 mr-4 rounded-[5px] font-bold md:mb-[3px] mb-[10px]">
                 {slide.firstBtn}
               </button>
-              <button className="border-[2px] border-yellow-500 text-white py-3 px-4 rounded-[5px] font-bold">
+              <button className="border-[2px] border-yellow-500 text-white py-3 px-3 rounded-[5px] font-bold">
                 {slide.secondBtn}
               </button>
             </div>
@@ -90,15 +90,15 @@ const Main = () => {
         );
       case 3:
         return (
-          <div className="absolute bottom-[20%] w-full text-white py-4 pr-[150px] text-end">
+          <div className="absolute bottom-[20%] right-[-30%] w-full text-white py-4 pr-[150px] text-end">
             <p className="md:text-4xl sm:text-2xl text-xl font-thin mb-[10px]">{slide.upperSmHeading}</p>
             <h2 className="md:text-6xl sm:text-4xl text-2xl font-extrabold my-[17px]">{slide.centerLgHeading}</h2>
             <p className="md:text-xl text-md my-[19px]">{slide.downSmText}</p>
-            <div className="mt-4">
-              <button className="bg-yellow-500 text-white py-3 px-6 m-4 rounded-[3px]">
+            <div className="mt-4 flex flex-col">
+              <button className="bg-yellow-500 text-white md:py-3 md:px-6 py-2 m-1 rounded-[3px]">
                 {slide.firstBtn}
               </button>
-              <button className="border-[2px] border-yellow-500 text-white py-3 px-6 m-3 rounded-[3px]">
+              <button className="border-[2px] border-yellow-500 text-white md:py-3 py-2 md:m-3 m-1 rounded-[3px]">
                 {slide.secondBtn}
               </button>
             </div>

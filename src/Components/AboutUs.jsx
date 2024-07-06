@@ -13,7 +13,7 @@ const AboutUs = () => {
     <section className="w-[100%] relative">
       <div className="max-w-[1350px] mx-auto bg-white ">
         {/* Section Between Main and About us  */}
-        <div className="btw-section flex md:flex-nowrap flex-wrap justify-around max-w-[80%] mx-auto bg-yellow-500  md:py-[30px] py-[15px] absolute top-[-5%] left-[12%] items-center">
+        <div className="btw-section flex md:flex-nowrap flex-wrap justify-around max-w-[90%] mx-auto bg-yellow-500  md:py-[30px] py-[15px] absolute top-[-5%] md:left-[15%] left-[12%] items-center">
           <div className="md:text-xl text-[18px] font-bold text-white lg:pr-[40px] md:pr-[30px] pr-[20px] md:pl-[100px] pl-[50px]">
             WE UNDERSTAND YOUR NEEDS ON CONSTRUCTION
           </div>
@@ -28,7 +28,7 @@ const AboutUs = () => {
 
         {/* About Us two major section  */}
         <div className="grid md:grid-cols-2 grid-cols-1 pt-[120px]">
-          <div className="left md:pl-[130px] max-w-[500px] mx-auto px-[20px]">
+          <div className="left lg:pl-[120px] max-w-[500px] mx-auto lg:px-0 px-[20px]">
             <h4 className="text-xl font-thin pb-[10px]">ABOUT US</h4>
             <h1 className="font-extrabold md:text-3xl text-2xl pb-[20px] opacity-80">
               WE DELIVER LANDMARK PROJECTS
@@ -44,13 +44,13 @@ const AboutUs = () => {
               <div className="py-[20px]">
                 <div className="pb-[50px] flex">
                   <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">🏆</h1>
-                  <h1 className="lg:text-[18px] text-[12px] font-bold opacity-80">
+                  <h1 className="lg:text-[15px] text-[12px] font-bold opacity-80">
                     WE'VE REPUTION FOR EXELLENCE
                   </h1>
                 </div>
                 <div className="pb-[50px] flex">
                 <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">🏆</h1>
-                <h1 className="lg:text-[18px] text-[12px] font-bold opacity-80">
+                <h1 className="lg:text-[15px] text-[12px] font-bold opacity-80">
                     GUIDED BY COMMITMENT
                   </h1>
                 </div>
@@ -58,20 +58,20 @@ const AboutUs = () => {
               <div className="py-[20px]">
                 <div className="pb-[50px] flex">
                 <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">🏆</h1>
-                <h1 className="lg:text-[18px] text-[12px] font-bold opacity-80">
+                <h1 className="lg:text-[15px] text-[12px] font-bold opacity-80">
                     WE BUILD PARTNERSHIPS
                   </h1>
                 </div>
                 <div className="pb-[50px] flex">
                 <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">🏆</h1>
-                <h1 className="lg:text-[18px] text-[12px] font-bold opacity-80">
+                <h1 className="lg:text-[15px] text-[12px] font-bold opacity-80">
                     A TEAM OF PROFESSIONALS
                   </h1>
                 </div>
               </div>
             </div>
           </div>
-          <div className="right max-w-[500px] mx-auto px-[20px]">
+          <div className="right max-w-[500px] mx-left lg:px-0 lg:pr-[70px] px-[20px]">
             <h4 className="font-extrabold md:text-3xl text-2xl pb-[20px] opacity-80 ">
               OUR VALUES
             </h4>
