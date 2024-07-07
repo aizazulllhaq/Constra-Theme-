@@ -13,7 +13,7 @@ const AboutUs = () => {
     <section className="w-[100%] relative">
       <div className="max-w-[1350px] mx-auto bg-white ">
         {/* Section Between Main and About us  */}
-        <div className="btw-section flex md:flex-nowrap flex-wrap justify-around max-w-[90%] mx-auto bg-yellow-500  md:py-[30px] py-[15px] absolute top-[-5%] md:left-[15%] left-[12%] items-center">
+        <div className="btw-section flex md:flex-nowrap flex-wrap justify-around max-w-[80%] mx-auto bg-yellow-500  md:py-[30px] py-[15px] absolute top-[-5%] md:left-[15%] left-[12%] items-center">
           <div className="md:text-xl text-[18px] font-bold text-white lg:pr-[40px] md:pr-[30px] pr-[20px] md:pl-[100px] pl-[50px]">
             WE UNDERSTAND YOUR NEEDS ON CONSTRUCTION
           </div>

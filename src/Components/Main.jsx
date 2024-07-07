@@ -90,15 +90,15 @@ const Main = () => {
         );
       case 3:
         return (
-          <div className="absolute bottom-[20%] right-[-30%] w-full text-white py-4 pr-[150px] text-end">
+          <div className="absolute bottom-[20%] sm:right-0 right-[-30%] w-full text-white py-4 pr-[150px] text-end">
             <p className="md:text-4xl sm:text-2xl text-xl font-thin mb-[10px]">{slide.upperSmHeading}</p>
             <h2 className="md:text-6xl sm:text-4xl text-2xl font-extrabold my-[17px]">{slide.centerLgHeading}</h2>
             <p className="md:text-xl text-md my-[19px]">{slide.downSmText}</p>
-            <div className="mt-4 flex flex-col">
-              <button className="bg-yellow-500 text-white md:py-3 md:px-6 py-2 m-1 rounded-[3px]">
+            <div className="mt-4 flex sm:flex-row flex-col justify-end">
+              <button className="bg-yellow-500 text-white sm:py-[5px] md:px-6 py-[10px] rounded-[3px] sm:mr-[15px] sm:mb-0 mb-[10px]">
                 {slide.firstBtn}
               </button>
-              <button className="border-[2px] border-yellow-500 text-white md:py-3 py-2 md:m-3 m-1 rounded-[3px]">
+              <button className="border-[2px] border-yellow-500 text-white sm:py-[15px] py-[10px] sm:px-[30px] rounded-[3px]">
                 {slide.secondBtn}
               </button>
             </div>

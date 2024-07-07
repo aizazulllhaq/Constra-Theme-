@@ -81,7 +81,7 @@ const Navbar = () => {
             } md:block`}
           >
             <li
-              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[20px] text-[15px]"
+              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px]"
               onMouseEnter={toggleHomeDropdown}
               onMouseLeave={closeDropdown}
             >
@@ -100,7 +100,7 @@ const Navbar = () => {
               )}
             </li>
             <li
-              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[20px] text-[15px]"
+              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px]"
               onMouseEnter={toggleCompanyDropdown}
               onMouseLeave={closeDropdown}
             >
@@ -126,7 +126,7 @@ const Navbar = () => {
               )}
             </li>
             <li
-              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[20px] text-[15px]"
+              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px]"
               onMouseEnter={toggleProjectsDropdown}
               onMouseLeave={closeDropdown}
             >
@@ -152,7 +152,7 @@ const Navbar = () => {
               )}
             </li>
             <li
-              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[20px] text-[15px]"
+              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px]"
               onMouseEnter={toggleServicesDropdown}
               onMouseLeave={closeDropdown}
             >
@@ -178,7 +178,7 @@ const Navbar = () => {
               )}
             </li>
             <li
-              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[20px] text-[15px]"
+              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px]"
               onMouseEnter={toggleFeaturesDropdown}
               onMouseLeave={closeDropdown}
             >
@@ -204,7 +204,7 @@ const Navbar = () => {
               )}
             </li>
             <li
-              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[20px] text-[15px]"
+              className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px]"
               onMouseEnter={toggleNewsDropdown}
               onMouseLeave={closeDropdown}
             >
@@ -229,11 +229,11 @@ const Navbar = () => {
                 </div>
               )}
             </li>
-            <li className="hover:text-yellow-400 md:py-0 py-2 lg:text-[20px] text-[15px]">CONTACT</li>
+            <li className="hover:text-yellow-400 md:py-0 py-2 lg:text-[15px] text-[15px]">CONTACT</li>
           </ul>
         </div>
 
-        <div className="right text-end md:pr-2 mr-[30px] lg:text-[25px] text-[20px]">🔍</div>
+        <div className="right text-end md:pr-2 mr-[30px] lg:text-[25px] text-[15px]">🔍</div>
       </div>
     </nav>
   );
