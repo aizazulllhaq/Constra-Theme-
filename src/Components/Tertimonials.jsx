@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Tertimonials = () => {
+  const [tNumber, setTNumber] = useState(1);
+
+  const handleTertomonials = (index) => {
+    setTNumber(index);
+  };
   return (
     <section className="w-[100%]">
       <div className="up max-w-[1170px] mx-auto grid md:grid-cols-2 grid-cols-1 my-[60px]">
@@ -34,7 +39,7 @@ const Tertimonials = () => {
               <figcaption className="flex mt-6 space-x-3">
                 <img
                   className="w-[80px] rounded-sm"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                  src={`https://demo.themefisher.com/constra-bootstrap/images/clients/testimonial${tNumber}.png`}
                   alt="profile picture"
                 />
                 <div className="flex flex-col">
@@ -43,6 +48,27 @@ const Tertimonials = () => {
                 </div>
               </figcaption>
             </figure>
+          </div>
+
+          <div className="text-center flex justify-center">
+            <h1
+              className="text-[10px] px-[5px] hover:text-yellow-500 cursor-pointer"
+              onClick={() => handleTertomonials(1)}
+            >
+              O
+            </h1>
+            <h1
+              className="text-[10px]  px-[5px] hover:text-yellow-500 cursor-pointer"
+              onClick={() => handleTertomonials(2)}
+            >
+              O
+            </h1>
+            <h1
+              className="text-[10px] px-[5px] hover:text-yellow-500 cursor-pointer"
+              onClick={() => handleTertomonials(3)}
+            >
+              O
+            </h1>
           </div>
         </div>
 
@@ -53,7 +79,7 @@ const Tertimonials = () => {
               HAPPY CLIENTS
             </h1>
             <div className="flex flex-col justify-center sm:grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 space-y-[10px] items-center text-center">
-              <div className="border-[1px] border-gray-500 mt-[9px] p-[20px] max-w-[150px]">
+              <div className="border-[1px] border-gray-500 p-[20px] max-w-[150px]">
                 <img
                   src="https://demo.themefisher.com/constra-bootstrap/images/clients/client1.png"
                   className="text-gray-500 w-[150px]"
@@ -108,12 +134,16 @@ const Tertimonials = () => {
 
         <div className="right flex md:flex-nowrap flex-wrap justify-around bg-gray-900 py-[35px] items-center max-w-[100%]">
           <div className="left">
-          <h1 className="text-white font-bold text-xl">NEWSLETTER SIGN-UP</h1>
-          <h3 className="text-white">Latest updates and news</h3>
+            <h1 className="text-white font-bold text-xl">NEWSLETTER SIGN-UP</h1>
+            <h3 className="text-white">Latest updates and news</h3>
           </div>
           <div className="right">
             <form action="" className="md:py-0 py-[20px]">
-              <input type="search" className="sm:w-[300px] w-[200px] border-[1px] border-gray-400 bg-transparent px-[25px] py-[7px]" placeholder="your email and hit enter"/>
+              <input
+                type="search"
+                className="sm:w-[300px] w-[200px] border-[1px] border-gray-400 bg-transparent px-[25px] py-[7px]"
+                placeholder="your email and hit enter"
+              />
             </form>
           </div>
         </div>

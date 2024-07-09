@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const RecentProjects = () => {
@@ -109,6 +109,10 @@ const RecentProjects = () => {
     filteredProjects("HEALTHCARE", 4);
   };
 
+  useEffect(() => {
+    handleShowAll();
+  }, []);
+
   return (
     <section className="w-[100%] pt-[70px] bg-gray-100">
       <div className="max-w-[1170px] mx-auto">
@@ -130,7 +134,11 @@ const RecentProjects = () => {
                   barColor[0] && "bg-yellow-400"
                 }`}
               >
-                <Link to={"/"} onClick={handleShowAll} className="md:text-md text-sm">
+                <Link
+                  to={"/"}
+                  onClick={handleShowAll}
+                  className="md:text-md text-sm"
+                >
                   SHOW ALL
                 </Link>
               </li>
@@ -139,7 +147,11 @@ const RecentProjects = () => {
                   barColor[1] && "bg-yellow-400"
                 }`}
               >
-                <Link to={"/"} onClick={handleCommertialProjects} className="md:text-md text-sm">
+                <Link
+                  to={"/"}
+                  onClick={handleCommertialProjects}
+                  className="md:text-md text-sm"
+                >
                   COMMERCIAL
                 </Link>
               </li>
@@ -148,7 +160,11 @@ const RecentProjects = () => {
                   barColor[2] && "bg-yellow-400"
                 }`}
               >
-                <Link to={"/"} onClick={handleEducationProjects} className="md:text-md text-sm">
+                <Link
+                  to={"/"}
+                  onClick={handleEducationProjects}
+                  className="md:text-md text-sm"
+                >
                   EDUCATION
                 </Link>
               </li>
@@ -157,7 +173,11 @@ const RecentProjects = () => {
                   barColor[3] && "bg-yellow-400"
                 }`}
               >
-                <Link to={"/"} onClick={handleGovernmentProjects} className="md:text-md text-sm">
+                <Link
+                  to={"/"}
+                  onClick={handleGovernmentProjects}
+                  className="md:text-md text-sm"
+                >
                   GOVERNMENT
                 </Link>
               </li>
@@ -166,7 +186,11 @@ const RecentProjects = () => {
                   barColor[4] && "bg-yellow-400"
                 }`}
               >
-                <Link to={"/"} onClick={handleInfrastructureProjects} className="md:text-md text-sm">
+                <Link
+                  to={"/"}
+                  onClick={handleInfrastructureProjects}
+                  className="md:text-md text-sm"
+                >
                   INFRASTRUCTURE
                 </Link>
               </li>
@@ -175,7 +199,11 @@ const RecentProjects = () => {
                   barColor[5] && "bg-yellow-400"
                 }`}
               >
-                <Link to={"/"} onClick={handleResedentialProjects} className="md:text-md text-sm">
+                <Link
+                  to={"/"}
+                  onClick={handleResedentialProjects}
+                  className="md:text-md text-sm"
+                >
                   RESEDENTIAL
                 </Link>
               </li>
@@ -184,7 +212,11 @@ const RecentProjects = () => {
                   barColor[6] && "bg-yellow-400"
                 }`}
               >
-                <Link to={"/"} onClick={handleHealthCareProjects} className="md:text-md text-sm">
+                <Link
+                  to={"/"}
+                  onClick={handleHealthCareProjects}
+                  className="md:text-md text-sm"
+                >
                   HEALTHCARE
                 </Link>
               </li>

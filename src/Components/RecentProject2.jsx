@@ -44,7 +44,7 @@ const RecentProject2 = () => {
           </div>
         </div>
         <div className="btn text-center py-[40px]">
-          <button className="px-[15px] py-[10px] text-white bg-yellow-500 rounded-[3px] font-bold">SEE ALL POSTS</button>
+          <button className="px-[15px] py-[10px] text-white bg-yellow-500 rounded-[3px] font-bold hover:bg-yellow-600">SEE ALL POSTS</button>
         </div>
       </div>
     </section>

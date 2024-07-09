@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ProjectsDetail from "./ProjectsDetail";
 
 const AboutUs = () => {
   const [isOpen, setIsOpen] = useState([false, false, false]);
@@ -43,28 +44,36 @@ const AboutUs = () => {
             <div className="services grid grid-cols-2">
               <div className="py-[20px]">
                 <div className="pb-[50px] flex">
-                  <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">🏆</h1>
+                  <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">
+                    🏆
+                  </h1>
                   <h1 className="lg:text-[15px] text-[12px] font-bold opacity-80">
                     WE'VE REPUTION FOR EXELLENCE
                   </h1>
                 </div>
                 <div className="pb-[50px] flex">
-                <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">🏆</h1>
-                <h1 className="lg:text-[15px] text-[12px] font-bold opacity-80">
+                  <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">
+                    🏆
+                  </h1>
+                  <h1 className="lg:text-[15px] text-[12px] font-bold opacity-80">
                     GUIDED BY COMMITMENT
                   </h1>
                 </div>
               </div>
               <div className="py-[20px]">
                 <div className="pb-[50px] flex">
-                <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">🏆</h1>
-                <h1 className="lg:text-[15px] text-[12px] font-bold opacity-80">
+                  <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">
+                    🏆
+                  </h1>
+                  <h1 className="lg:text-[15px] text-[12px] font-bold opacity-80">
                     WE BUILD PARTNERSHIPS
                   </h1>
                 </div>
                 <div className="pb-[50px] flex">
-                <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">🏆</h1>
-                <h1 className="lg:text-[15px] text-[12px] font-bold opacity-80">
+                  <h1 className="lg:text-4xl text-2xl opacity-80 pr-[10px]">
+                    🏆
+                  </h1>
+                  <h1 className="lg:text-[15px] text-[12px] font-bold opacity-80">
                     A TEAM OF PROFESSIONALS
                   </h1>
                 </div>
@@ -92,7 +101,7 @@ const AboutUs = () => {
                   </p>
                 </div>
                 <div
-                  className={`anwser px-[10px]  mb-[12px] answer overflow-hidden transition-all duration-500  sm:text-[16px] text-sm mt-[1px] opacity-80 ${
+                  className={`anwser px-[10px]  mb-[12px] overflow-hidden transition-all duration-500  sm:text-[16px] text-sm mt-[1px] opacity-80 ${
                     isOpen[0]
                       ? "max-h-screen pl-[10px] sm:py-[20px] py-[10px] border-[1px] border-gray-400"
                       : "max-h-0"
@@ -158,46 +167,7 @@ const AboutUs = () => {
         </div>
 
         {/* About us last Detail section  */}
-        <div className="detail max-w-[100%] mx-auto bg-[#252525]">
-          <div className="max-w-[900px] mx-auto flex sm:flex-nowrap flex-wrap sm:flex-row lg:justify-between py-[50px] text-white flex-col justify-center text-center">
-            <div className="total-projects pr-[10px]">
-              <img
-                src="https://demo.themefisher.com/constra-bootstrap/images/icon-image/fact1.png"
-                alt=""
-                className="max-w-[120px] mx-auto"
-              />
-              <h1 className="text-5xl font-bold text-center py-[15px]">1789</h1>
-              <h3 className="text-xl font-bold text-yellow-500">TOTAL PROJECTS</h3>
-            </div>
-            <div className="staff-members pl-[10px]">
-              <img
-                src="https://demo.themefisher.com/constra-bootstrap/images/icon-image/fact2.png"
-                alt=""
-                className="max-w-[120px] mx-auto"
-              />
-              <h1 className="text-5xl font-bold text-center py-[15px]">647</h1>
-              <h3 className="text-xl font-bold text-yellow-500">STAFF MEMBERS</h3>
-            </div>
-            <div className="hours-of-work pl-[10px]">
-              <img
-                src="https://demo.themefisher.com/constra-bootstrap/images/icon-image/fact3.png"
-                alt=""
-                className="max-w-[120px] mx-auto"
-              />
-              <h1 className="text-5xl font-bold text-center py-[15px]">4000</h1>
-              <h3 className="text-xl font-bold text-yellow-500">HOURS OF WORK</h3>
-            </div>
-            <div className="countries-experience pl-[10px]">
-              <img
-                src="https://demo.themefisher.com/constra-bootstrap/images/icon-image/fact4.png"
-                alt=""
-                className="max-w-[120px] mx-auto"
-              />
-              <h1 className="text-5xl font-bold text-center py-[15px]">44</h1>
-              <h3 className="text-xl font-bold text-yellow-500">Countries Experience</h3>
-            </div>
-          </div>
-        </div>
+        <ProjectsDetail />
       </div>
     </section>
   );

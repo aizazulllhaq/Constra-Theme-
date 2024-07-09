@@ -11,7 +11,7 @@ const ContactDetail = () => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
   return (
-    <section className="w-[100%]">
+    <section className="w-[100%] overflow-hidden">
       <div className="">
         {/* Upper Section  */}
         <div className="upper w-[100%] bg-gray-200 py-[7px]">

@@ -1,6 +1,7 @@
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -70,17 +71,19 @@ const Navbar = () => {
       <div className="max-w-[1170px] mx-auto grid md:grid-cols-[70%_auto] grid-cols-[50%_50%] items-center">
         <div className="left relative">
           <button
-            onClick={() => setOpen(!open)}
+            onCLinkck={() => setOpen(!open)}
             className="text-xl sm:text-white bg-yellow-500 md:px-0 px-1 md:py-0 py-1 absolute left-[8%] top-1/2 transform -translate-y-1/2 cursor-pointer md:hidden"
           >
             <FontAwesomeIcon icon={open ? faTimes : faBars} size="lg" />
           </button>
           <ul
             className={`md:flex md:space-x-5 justify-end md:text-xl text-md md:static py-2 font-semibold ${
-              open ? "block mt-5 absolute top-0 left-0 bg-gray-900 w-[750px] pl-[50px]" : "hidden"
+              open
+                ? "block mt-5 absolute top-0 left-0 bg-gray-900 w-[750px] pl-[50px]"
+                : "hidden"
             } md:block`}
           >
-            <li
+            <Link
               className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px]"
               onMouseEnter={toggleHomeDropdown}
               onMouseLeave={closeDropdown}
@@ -89,17 +92,17 @@ const Navbar = () => {
               {homeDropdown && (
                 <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
                   <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
-                    <li className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
+                    <Link className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
                       Home One
-                    </li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
                       Home Two
-                    </li>
+                    </Link>
                   </ul>
                 </div>
               )}
-            </li>
-            <li
+            </Link>
+            <Link
               className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px]"
               onMouseEnter={toggleCompanyDropdown}
               onMouseLeave={closeDropdown}
@@ -108,24 +111,32 @@ const Navbar = () => {
               {companyDropdown && (
                 <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
                   <ul className="flex flex-col space-y-2 bg-white w-28 py-3 pl-5">
-                    <li className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
+                    <Link
+                      to={"/about"}
+                      className="text-black hover:text-yellow-400 border-b border-gray-400 py-1"
+                    >
                       About Us
-                    </li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link to={"/team"} className="text-black hover:text-yellow-400">
                       Our People
-                    </li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link
+                      to={"/testomonials"}
+                      className="text-black hover:text-yellow-400"
+                    >
                       Testimonials
-                    </li>
-                    <li className="text-black hover:text-yellow-400">FAQs</li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link to={"/faqs"} className="text-black hover:text-yellow-400">
+                      FAQs
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
                       Pricing
-                    </li>
+                    </Link>
                   </ul>
                 </div>
               )}
-            </li>
-            <li
+            </Link>
+            <Link
               className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px]"
               onMouseEnter={toggleProjectsDropdown}
               onMouseLeave={closeDropdown}
@@ -134,24 +145,26 @@ const Navbar = () => {
               {projectsDropdown && (
                 <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
                   <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
-                    <li className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
+                    <Link className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
                       About Us
-                    </li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
                       Our People
-                    </li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
                       Testimonials
-                    </li>
-                    <li className="text-black hover:text-yellow-400">FAQs</li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
+                      FAQs
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
                       Pricing
-                    </li>
+                    </Link>
                   </ul>
                 </div>
               )}
-            </li>
-            <li
+            </Link>
+            <Link
               className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px]"
               onMouseEnter={toggleServicesDropdown}
               onMouseLeave={closeDropdown}
@@ -160,24 +173,26 @@ const Navbar = () => {
               {servicesDropdown && (
                 <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
                   <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
-                    <li className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
+                    <Link className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
                       About Us
-                    </li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
                       Our People
-                    </li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
                       Testimonials
-                    </li>
-                    <li className="text-black hover:text-yellow-400">FAQs</li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
+                      FAQs
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
                       Pricing
-                    </li>
+                    </Link>
                   </ul>
                 </div>
               )}
-            </li>
-            <li
+            </Link>
+            <Link
               className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px]"
               onMouseEnter={toggleFeaturesDropdown}
               onMouseLeave={closeDropdown}
@@ -186,24 +201,26 @@ const Navbar = () => {
               {featuresDropdown && (
                 <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
                   <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
-                    <li className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
+                    <Link className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
                       About Us
-                    </li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
                       Our People
-                    </li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
                       Testimonials
-                    </li>
-                    <li className="text-black hover:text-yellow-400">FAQs</li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
+                      FAQs
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
                       Pricing
-                    </li>
+                    </Link>
                   </ul>
                 </div>
               )}
-            </li>
-            <li
+            </Link>
+            <Link
               className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px]"
               onMouseEnter={toggleNewsDropdown}
               onMouseLeave={closeDropdown}
@@ -212,28 +229,34 @@ const Navbar = () => {
               {newsDropdown && (
                 <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
                   <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
-                    <li className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
+                    <Link className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
                       About Us
-                    </li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
                       Our People
-                    </li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
                       Testimonials
-                    </li>
-                    <li className="text-black hover:text-yellow-400">FAQs</li>
-                    <li className="text-black hover:text-yellow-400">
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
+                      FAQs
+                    </Link>
+                    <Link className="text-black hover:text-yellow-400">
                       Pricing
-                    </li>
+                    </Link>
                   </ul>
                 </div>
               )}
-            </li>
-            <li className="hover:text-yellow-400 md:py-0 py-2 lg:text-[15px] text-[15px]">CONTACT</li>
+            </Link>
+            <Link className="hover:text-yellow-400 md:py-0 py-2 lg:text-[15px] text-[15px]">
+              CONTACT
+            </Link>
           </ul>
         </div>
 
-        <div className="right text-end md:pr-2 mr-[30px] lg:text-[25px] text-[15px]">🔍</div>
+        <div className="right text-end md:pr-2 mr-[30px] lg:text-[25px] text-[15px]">
+          🔍
+        </div>
       </div>
     </nav>
   );
