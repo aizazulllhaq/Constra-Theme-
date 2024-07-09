@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BiArrowFromLeft, BiArrowFromRight } from "react-icons/bi";
+import RecentProjects from "./RecentProjects";
 
 const Main = ({ page = "Home" }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -263,6 +264,34 @@ const Main = ({ page = "Home" }) => {
       h1: "Silicon Bench And Cornike Begin Construction Solar Facilities",
     },
   ];
+
+  const pricingCards = [
+    {
+      firstHeading: "Basic Plan",
+      secondHeading: "$9.99/month",
+      paragraph: "Great for individuals just getting started.",
+    },
+    {
+      firstHeading: "Pro Plan",
+      secondHeading: "$19.99/month",
+      paragraph: "Ideal for professionals who need more features.",
+    },
+    {
+      firstHeading: "Enterprise Plan",
+      secondHeading: "$49.99/month",
+      paragraph: "Perfect for large teams and organizations.",
+    },
+  ];
+
+  const commonFeatures = [
+    "Project Management for Owners",
+    "Pre-construction feasibility",
+    "On-site representation",
+    "Quality control inspections",
+    "Schedule claim preparation/defense",
+    "Project phasing development",
+  ];
+
   return (
     <section className="w-full relative">
       {page == "Home" && (
@@ -649,8 +678,12 @@ const Main = ({ page = "Home" }) => {
                   key={index}
                   className="news flex justify-between py-[15px]"
                 >
-                  <img src={news.image} alt={news.h1} className="w-[100px]" />
-                  <h3 className="text-sm font-semibold pl-[5px] opacity-80">
+                  <img
+                    src={news.image}
+                    alt={news.h1}
+                    className="sm:max-w-[100px] max-w-[60px]"
+                  />
+                  <h3 className="sm:text-sm text-[12px] font-bold pl-[5px] opacity-80">
                     {news.h1}
                   </h3>
                 </div>
@@ -674,6 +707,156 @@ const Main = ({ page = "Home" }) => {
               <p className="font-semibold text-center sm:text-sm text-[12px]">
                 HOME / COMPANY / ABOUT US
               </p>
+            </div>
+          </div>
+
+          <div className="">
+            <div className="heading text-center my-[40px]">
+              <h2 className="text-2xl font-thin ">GRAP THE PACKAGES</h2>
+              <h1 className="md:text-4xl sm:text-2xl text-xl text-black font-extrabold opacity-70">
+                PRICING
+              </h1>
+            </div>
+            <div className="max-w-[1050px] mx-auto grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+              {pricingCards.map((card, index) => (
+                <div key={index} className="w-full p-4">
+                  <div
+                    className={`${
+                      index == 1 ? "bg-yellow-500" : "bg-gray-800"
+                    } text-white  rounded-t-[7px] px-[20px] py-[10px]`}
+                  >
+                    <h1 className="text-2xl font-bold mb-2">
+                      {card.firstHeading}
+                    </h1>
+                    <h2 className="text-xl mb-4">{card.secondHeading}</h2>
+                    <p className="mb-6">{card.paragraph}</p>
+                  </div>
+                  <div className="bg-white rounded-lg shadow-lg p-6">
+                    {commonFeatures.map((feature, i) => (
+                      <p
+                        key={i}
+                        className="mb-2 text-center py-[10px] opacity-70"
+                      >
+                        {feature}
+                      </p>
+                    ))}
+                    <div className="btn text-center pt-[10px]">
+                      <button
+                        className={`text-white px-[15px] py-[10px] rounded-[3px] ${
+                          index == 1 ? "bg-yellow-500" : "bg-black"
+                        }`}
+                      >
+                        ORDER NOW
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            s
+          </div>
+        </div>
+      )}
+
+      {page == "Projects" && (
+        <div className="">
+          <div className="w-full">
+            <img
+              className="relative inset-0 w-full h-[300px] object-cover"
+              src="https://demo.themefisher.com/constra-bootstrap/images/banner/banner1.jpg"
+            />
+            <div className="content absolute sm:top-[3%] md:top-[10%] top-[5%] sm:left-[40%] left-[25%] text-white">
+              <h1 className="sm:text-4xl text-xl font-extrabold text-center py-[10px]">
+                PROJECTS
+              </h1>
+              <p className="font-semibold text-center sm:text-sm text-[12px]">
+                HOME / COMPANY / ABOUT US
+              </p>
+            </div>
+          </div>
+
+          <RecentProjects page="ProjectsPage" />
+        </div>
+      )}
+
+      {page == "Project" && (
+        <div className="">
+          <div className="w-full">
+            <img
+              className="relative inset-0 w-full h-[300px] object-cover"
+              src="https://demo.themefisher.com/constra-bootstrap/images/banner/banner1.jpg"
+            />
+            <div className="content absolute sm:top-[3%] md:top-[10%] top-[10%] sm:left-[40%] left-[20%] text-white">
+              <h1 className="sm:text-4xl text-xl font-extrabold text-center py-[10px]">
+                PROJECT
+              </h1>
+              <p className="font-semibold text-center sm:text-sm text-[12px]">
+                HOME / COMPANY / ABOUT US
+              </p>
+            </div>
+          </div>
+
+          <div className="w-[100%]">
+            <div className="max-w-[1100px] mx-auto grid md:grid-cols-[60%_auto] grid-cols-1 sm:gap-[50px] sm:p-0 p-[10px]">
+              <img
+                src="https://demo.themefisher.com/constra-bootstrap/images/projects/project5.jpg"
+                alt=""
+                className="sm:m-[20px]"
+              />
+              <div className="m-[20px]">
+                <div className="heading">
+                  <h1 className="md:text-3xl font-bold opacity-80 py-[10px]">
+                    CAPITAL TELTWAY BUILDING
+                  </h1>
+                  <p className="opacity-70 py-[10px]">
+                    Morbi turpis nisl, auctor ut nisl vel, pellentesque euismod
+                    nunc nunc accumsan imperdiet.
+                  </p>
+                </div>
+                <div className="details flex flex-col">
+                  <div className="px-[20px] py-[10px]">
+                    <h1 className="text-md opacity-80 font-semibold py-[5px]">
+                      Client
+                    </h1>
+                    <p className="opacity-70">Pransbay Powers Authority</p>
+                  </div>
+                  <div className="px-[20px] pb-[10px]">
+                    <h1 className="text-md opacity-80 font-semibold py-[5px]">
+                      Architect
+                    </h1>
+                    <p className="opacity-70">Dlarke Pelli Incorp</p>
+                  </div>
+                  <div className="px-[20px] pb-[10px]">
+                    <h1 className="text-md opacity-80 font-semibold py-[5px]">
+                      Location
+                    </h1>
+                    <p className="opacity-70">McLean, VA</p>
+                  </div>
+                  <div className="px-[20px] pb-[10px]">
+                    <h1 className="text-md opacity-80 font-semibold py-[5px]">
+                      Size
+                    </h1>
+                    <p className="opacity-70"></p>
+                  </div>
+                  <div className="px-[20px] pb-[10px]">
+                    <h1 className="text-md opacity-80 font-semibold py-[5px]">
+                      Year Completed
+                    </h1>
+                    <p className="opacity-70">2015</p>
+                  </div>
+                  <div className="px-[20px] pb-[10px]">
+                    <h1 className="text-md opacity-80 font-semibold py-[5px]">
+                      Categories
+                    </h1>
+                    <p className="opacity-70">Commercial , Interrior</p>
+                  </div>
+                  <div className="btn px-[20px] pb-[10px] py-[20px]">
+                    <button className="px-[15px] py-[10px] text-white bg-yellow-500 hover:bg-blue-500">
+                      VIEW PRODUCT
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

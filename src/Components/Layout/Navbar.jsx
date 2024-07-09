@@ -129,7 +129,7 @@ const Navbar = () => {
                     <Link to={"/faqs"} className="text-black hover:text-yellow-400">
                       FAQs
                     </Link>
-                    <Link className="text-black hover:text-yellow-400">
+                    <Link to={"/pricing"} className="text-black hover:text-yellow-400">
                       Pricing
                     </Link>
                   </ul>
@@ -145,20 +145,11 @@ const Navbar = () => {
               {projectsDropdown && (
                 <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
                   <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
-                    <Link className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
-                      About Us
+                    <Link to={"/projects"} className="text-black hover:text-yellow-400">
+                      Projects All
                     </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      Our People
-                    </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      Testimonials
-                    </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      FAQs
-                    </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      Pricing
+                    <Link to={"/project"} className="text-black hover:text-yellow-400">
+                      Single Project
                     </Link>
                   </ul>
                 </div>

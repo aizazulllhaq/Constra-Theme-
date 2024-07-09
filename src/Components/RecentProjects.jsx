@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const RecentProjects = () => {
+const RecentProjects = ({ page = "projects" }) => {
   const [barColor, setBarColor] = useState([
     false,
     false,
@@ -114,16 +114,18 @@ const RecentProjects = () => {
   }, []);
 
   return (
-    <section className="w-[100%] pt-[70px] bg-gray-100">
+    <section className="w-[100%] mx-auto pt-[70px] bg-gray-100">
       <div className="max-w-[1170px] mx-auto">
-        <div className="heading text-center">
-          <h3 className="md:text-2xl text-xl font-thin pt-[10px]">
-            WORK OF EXPERIENCE
-          </h3>
-          <h1 className="md:text-4xl text-2xl font-extrabold py-[5px] opacity-85">
-            RECENT PROJECTS
-          </h1>
-        </div>
+        {page == "projects" && (
+          <div className="heading text-center">
+            <h3 className="md:text-2xl text-xl font-thin pt-[10px]">
+              WORK OF EXPERIENCE
+            </h3>
+            <h1 className="md:text-4xl text-2xl font-extrabold py-[5px] opacity-85">
+              RECENT PROJECTS
+            </h1>
+          </div>
+        )}
 
         <div className="projects-bar pt-[70px] ">
           {/* Projects Header Bar */}
@@ -135,7 +137,6 @@ const RecentProjects = () => {
                 }`}
               >
                 <Link
-                  to={"/"}
                   onClick={handleShowAll}
                   className="md:text-md text-sm"
                 >
@@ -148,7 +149,6 @@ const RecentProjects = () => {
                 }`}
               >
                 <Link
-                  to={"/"}
                   onClick={handleCommertialProjects}
                   className="md:text-md text-sm"
                 >
@@ -161,7 +161,6 @@ const RecentProjects = () => {
                 }`}
               >
                 <Link
-                  to={"/"}
                   onClick={handleEducationProjects}
                   className="md:text-md text-sm"
                 >
@@ -174,7 +173,6 @@ const RecentProjects = () => {
                 }`}
               >
                 <Link
-                  to={"/"}
                   onClick={handleGovernmentProjects}
                   className="md:text-md text-sm"
                 >
@@ -187,7 +185,6 @@ const RecentProjects = () => {
                 }`}
               >
                 <Link
-                  to={"/"}
                   onClick={handleInfrastructureProjects}
                   className="md:text-md text-sm"
                 >
@@ -200,7 +197,6 @@ const RecentProjects = () => {
                 }`}
               >
                 <Link
-                  to={"/"}
                   onClick={handleResedentialProjects}
                   className="md:text-md text-sm"
                 >
@@ -213,7 +209,6 @@ const RecentProjects = () => {
                 }`}
               >
                 <Link
-                  to={"/"}
                   onClick={handleHealthCareProjects}
                   className="md:text-md text-sm"
                 >

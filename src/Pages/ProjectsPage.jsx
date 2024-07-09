@@ -4,15 +4,15 @@ import Navbar from "../Components/Layout/Navbar";
 import Main from "../Components/Main";
 import Footer from "../Components/Layout/Footer";
 
-const PricingPage = () => {
+const ProjectsPage = () => {
   return (
     <section className="w-[100%]">
       <ContactDetail />
       <Navbar />
-      <Main page="Pricing" />
+      <Main page="Projects" />
       <Footer />
     </section>
   );
 };
 
-export default PricingPage;
+export default ProjectsPage;
