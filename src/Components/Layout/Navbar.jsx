@@ -71,15 +71,15 @@ const Navbar = () => {
       <div className="max-w-[1170px] mx-auto grid md:grid-cols-[70%_auto] grid-cols-[50%_50%] items-center">
         <div className="left relative">
           <button
-            onCLinkck={() => setOpen(!open)}
+            onClick={() => setOpen(!open)}
             className="text-xl sm:text-white bg-yellow-500 md:px-0 px-1 md:py-0 py-1 absolute left-[8%] top-1/2 transform -translate-y-1/2 cursor-pointer md:hidden"
           >
             <FontAwesomeIcon icon={open ? faTimes : faBars} size="lg" />
           </button>
           <ul
-            className={`md:flex md:space-x-5 justify-end md:text-xl text-md md:static py-2 font-semibold ${
+            className={`flex md:flex-row md:space-x-5 justify-end md:text-xl text-md md:static py-2 font-semibold ${
               open
-                ? "block mt-5 absolute top-0 left-0 bg-gray-900 w-[750px] pl-[50px]"
+                ? "block flex-col mt-5 absolute top-0 left-0 bg-gray-900 w-[750px] pl-[50px]"
                 : "hidden"
             } md:block`}
           >
@@ -117,7 +117,10 @@ const Navbar = () => {
                     >
                       About Us
                     </Link>
-                    <Link to={"/team"} className="text-black hover:text-yellow-400">
+                    <Link
+                      to={"/team"}
+                      className="text-black hover:text-yellow-400"
+                    >
                       Our People
                     </Link>
                     <Link
@@ -126,10 +129,16 @@ const Navbar = () => {
                     >
                       Testimonials
                     </Link>
-                    <Link to={"/faqs"} className="text-black hover:text-yellow-400">
+                    <Link
+                      to={"/faqs"}
+                      className="text-black hover:text-yellow-400"
+                    >
                       FAQs
                     </Link>
-                    <Link to={"/pricing"} className="text-black hover:text-yellow-400">
+                    <Link
+                      to={"/pricing"}
+                      className="text-black hover:text-yellow-400"
+                    >
                       Pricing
                     </Link>
                   </ul>
@@ -145,10 +154,16 @@ const Navbar = () => {
               {projectsDropdown && (
                 <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
                   <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
-                    <Link to={"/projects"} className="text-black hover:text-yellow-400">
+                    <Link
+                      to={"/projects"}
+                      className="text-black hover:text-yellow-400"
+                    >
                       Projects All
                     </Link>
-                    <Link to={"/project"} className="text-black hover:text-yellow-400">
+                    <Link
+                      to={"/project"}
+                      className="text-black hover:text-yellow-400"
+                    >
                       Single Project
                     </Link>
                   </ul>
@@ -164,20 +179,17 @@ const Navbar = () => {
               {servicesDropdown && (
                 <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
                   <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
-                    <Link className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
-                      About Us
+                    <Link
+                      to={"/services"}
+                      className="text-black hover:text-yellow-400"
+                    >
+                      Services
                     </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      Our People
-                    </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      Testimonials
-                    </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      FAQs
-                    </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      Pricing
+                    <Link
+                      to={"/service"}
+                      className="text-black hover:text-yellow-400"
+                    >
+                      Single Service
                     </Link>
                   </ul>
                 </div>
@@ -192,20 +204,24 @@ const Navbar = () => {
               {featuresDropdown && (
                 <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
                   <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
-                    <Link className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
-                      About Us
+                    <Link
+                      to={"/typography"}
+                      className="text-black hover:text-yellow-400 border-b border-gray-400 py-1"
+                    >
+                      Typography
                     </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      Our People
+                    <Link
+                      to={"/pageNotFound"}
+                      className="text-black hover:text-yellow-400"
+                    >
+                      404
                     </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      Testimonials
-                    </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      FAQs
-                    </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      Pricing
+                    <Link
+                      className="relative hover:text-yellow-400 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px] text-black"
+                      onMouseEnter={toggleFeaturesDropdown}
+                      onMouseLeave={closeDropdown}
+                    >
+                      Parent Menu
                     </Link>
                   </ul>
                 </div>

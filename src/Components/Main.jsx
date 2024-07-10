@@ -861,6 +861,78 @@ const Main = ({ page = "Home" }) => {
           </div>
         </div>
       )}
+
+      {page == "Services" && (
+        <div className="">
+          <div className="w-full">
+            <img
+              className="relative inset-0 w-full h-[300px] object-cover"
+              src="https://demo.themefisher.com/constra-bootstrap/images/banner/banner1.jpg"
+            />
+            <div className="content absolute sm:top-[3%] md:top-[30%] top-[35%] sm:left-[40%] left-[30%] text-white">
+              <h1 className="sm:text-4xl text-xl font-extrabold text-center py-[10px]">
+                SERVICES
+              </h1>
+              <p className="font-semibold text-center sm:text-sm text-[12px]">
+                HOME / COMPANY / ABOUT US
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {page == "Typography" && (
+        <div className="w-full">
+          <img
+            className="relative inset-0 w-full h-[300px] object-cover"
+            src="https://demo.themefisher.com/constra-bootstrap/images/banner/banner1.jpg"
+          />
+          <div className="content absolute top-[30%] sm:left-[40%] left-[25%] text-white">
+            <h1 className="sm:text-4xl text-xl font-extrabold text-center py-[10px]">
+              TYPOGRAPHY
+            </h1>
+            <p className="font-semibold text-center sm:text-sm text-[12px]">
+              HOME / COMPANY / ABOUT US
+            </p>
+          </div>
+        </div>
+      )}
+
+      {page == "Service" && (
+        <div className="">
+          <div className="w-full">
+            <img
+              className="relative inset-0 w-full h-[300px] object-cover"
+              src="https://demo.themefisher.com/constra-bootstrap/images/banner/banner1.jpg"
+            />
+            <div className="content absolute sm:top-[3%] md:top-[30%] top-[35%] sm:left-[40%] left-[30%] text-white">
+              <h1 className="sm:text-4xl text-xl font-extrabold text-center py-[10px]">
+                SERVICE
+              </h1>
+              <p className="font-semibold text-center sm:text-sm text-[12px]">
+                HOME / COMPANY / ABOUT US
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {page == "404" && (
+        <div className="w-full">
+          <img
+            className="relative inset-0 w-full h-[300px] object-cover"
+            src="https://demo.themefisher.com/constra-bootstrap/images/banner/banner1.jpg"
+          />
+          <div className="content absolute top-[40%] sm:left-[40%] left-[20%] text-white">
+            <h1 className="sm:text-4xl text-2xl font-extrabold text-center py-[10px]">
+              PAGE NOT FOUND
+            </h1>
+            <p className="font-semibold text-center sm:text-sm text-[12px]">
+              HOME / COMPANY / ABOUT US
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
