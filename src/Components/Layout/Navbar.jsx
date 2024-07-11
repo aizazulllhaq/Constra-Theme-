@@ -11,6 +11,7 @@ const Navbar = () => {
   const [servicesDropdown, setServicesDropdown] = useState(false);
   const [featuresDropdown, setFeaturesDropdown] = useState(false);
   const [newsDropdown, setNewsDropdown] = useState(false);
+  const [parentDropDown, setParentDropDown] = useState(false);
   const [open, setOpen] = useState(false);
 
   const handleScroll = () => {
@@ -53,6 +54,10 @@ const Navbar = () => {
     setNewsDropdown(!newsDropdown);
   };
 
+  const toggleParentDropDown = () => {
+    setParentDropDown(!parentDropDown);
+  };
+
   const closeDropdown = () => {
     setHomeDropdown(false);
     setCompanyDropdown(false);
@@ -60,6 +65,7 @@ const Navbar = () => {
     setProjectsDropdown(false);
     setFeaturesDropdown(false);
     setNewsDropdown(false);
+    setParentDropDown(false);
   };
 
   return (
@@ -84,6 +90,7 @@ const Navbar = () => {
             } md:block`}
           >
             <Link
+            to={"/"}
               className="relative hover:text-yellow-500 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px]"
               onMouseEnter={toggleHomeDropdown}
               onMouseLeave={closeDropdown}
@@ -218,10 +225,28 @@ const Navbar = () => {
                     </Link>
                     <Link
                       className="relative hover:text-yellow-400 cursor-pointer md:py-0 py-2 lg:text-[15px] text-[15px] text-black"
-                      onMouseEnter={toggleFeaturesDropdown}
+                      onMouseEnter={toggleParentDropDown}
                       onMouseLeave={closeDropdown}
                     >
-                      Parent Menu
+                      Parent Menu{" "}
+                      {parentDropDown && (
+                        <div className="absolute top-[10%] left-[70%] py-2 w-full text-white shadow-lg z-10">
+                          <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
+                            <Link
+                              to={"/"}
+                              className="text-black hover:text-yellow-400"
+                            >
+                              CHILD MENU 1
+                            </Link>
+                            <Link
+                              to={"/"}
+                              className="text-black hover:text-yellow-400"
+                            >
+                              CHILD MENU 2
+                            </Link>
+                          </ul>
+                        </div>
+                      )}
                     </Link>
                   </ul>
                 </div>
@@ -235,27 +260,21 @@ const Navbar = () => {
               NEWS
               {newsDropdown && (
                 <div className="absolute top-full left-0 py-2 w-full text-white shadow-lg z-10">
-                  <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center">
-                    <Link className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
-                      About Us
+                  <ul className="flex flex-col space-y-2 bg-white w-28 py-3 items-center px-[5px]">
+                    <Link to={"/newsLeftSideBar"} className="text-black hover:text-yellow-400 border-b border-gray-400 py-1">
+                      NEWS LEFT SIDEBAR
                     </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      Our People
+                    <Link to={"/newsRightSideBar"} className="text-black hover:text-yellow-400">
+                      NEWS RIGHT SIDEBAR
                     </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      Testimonials
-                    </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      FAQs
-                    </Link>
-                    <Link className="text-black hover:text-yellow-400">
-                      Pricing
+                    <Link to={"/singleNews"} className="text-black hover:text-yellow-400">
+                      NEWS SINGLE
                     </Link>
                   </ul>
                 </div>
               )}
             </Link>
-            <Link className="hover:text-yellow-400 md:py-0 py-2 lg:text-[15px] text-[15px]">
+            <Link  to={"/contact"} className="hover:text-yellow-400 md:py-0 py-2 lg:text-[15px] text-[15px]">
               CONTACT
             </Link>
           </ul>

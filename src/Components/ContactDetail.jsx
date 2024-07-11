@@ -5,6 +5,7 @@ import {
   faGithub,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 const ContactDetail = () => {
   const handleExternalLink = (url) => {
@@ -72,11 +73,13 @@ const ContactDetail = () => {
         <div className="w-[100%] bg-white">
           <div className="down max-w-[1170px] mx-auto grid lg:grid-cols-[30%_auto] py-[30px] grid-cols-1">
             <div className="left sm:pl-[20px] md:text-left text-center">
+              <Link to={"/"}>
               <img
                 src="https://demo.themefisher.com/constra-bootstrap/images/logo.png"
                 className="max-w-[200px] mx-auto md:pb-0 pb-[20px]"
                 alt=""
               />
+              </Link>
             </div>
             <div className="right grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 sm:pl-[100px] text-center">
               <div className="sm:py-0 py-[10px] md:mb-0 mb-[10px]">

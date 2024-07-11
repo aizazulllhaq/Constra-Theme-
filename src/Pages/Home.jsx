@@ -6,11 +6,13 @@ import Services from "../Components/Services";
 import RecentProjects from "../Components/RecentProjects";
 import RecentProject2 from "../Components/RecentProject2";
 import Footer from "../Components/Layout/Footer";
-import Testimonials from "../Components/Tertimonials"
+import Testimonials from "../Components/Tertimonials";
+import ScrollToTop from "../Components/ScrollTop";
 
 const Home = () => {
   return (
     <main className="w-[100%]">
+      <ScrollToTop />
       <ContactDetail />
       <Navbar />
       <Main />

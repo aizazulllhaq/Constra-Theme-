@@ -4,6 +4,7 @@ import ProjectsDetail from "../Components/ProjectsDetail";
 import Main from "../Components/Main";
 import RecentProjects from "../Components/RecentProjects";
 import Footer from "../Components/Layout/Footer";
+import ScrollToTop from "../Components/ScrollTop";
 
 const AboutUsPage = () => {
   const professionalTeam = [
@@ -43,6 +44,7 @@ const AboutUsPage = () => {
 
   return (
     <section className="w-[100%]">
+      <ScrollToTop/>
       <ContactDetail />
       <Navbar />
       <Main page="About" />

@@ -2,7 +2,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Pages/Home";
 import AboutUsPage from "./Pages/AboutUsPage";
-import Test from "./Test";
 import OurLeadersPage from "./Pages/OurLeadersPage";
 import TestonomialsPage from "./Pages/TestonomialsPage";
 import FAQ from "./Pages/FAQ";
@@ -13,6 +12,9 @@ import ServicesPage from "./Pages/ServicesPage";
 import SingleService from "./Pages/SingleService";
 import Typography from "./Pages/Typography";
 import NotFound from "./Pages/NotFound";
+import NewsSideBar from "./Pages/NewsPages/NewsSideBar";
+import SingleNews from "./Pages/NewsPages/SingleNews";
+import ContactPage from "./Pages/ContactPage";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -61,7 +63,23 @@ const App = () => {
       element: <Typography />,
     },
     {
-      path: "/pageNotFound",
+      path: "/newsLeftSideBar",
+      element: <NewsSideBar side="left" />,
+    },
+    {
+      path: "/newsRightSideBar",
+      element: <NewsSideBar side="right" />,
+    },
+    {
+      path: "/singleNews",
+      element: <SingleNews />,
+    },
+    {
+      path:"/contact",
+      element:<ContactPage/>
+    },
+    {
+      path: "*",
       element: <NotFound />,
     },
   ]);

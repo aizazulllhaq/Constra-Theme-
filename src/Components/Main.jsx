@@ -933,6 +933,40 @@ const Main = ({ page = "Home" }) => {
           </div>
         </div>
       )}
+
+      {page == "News" && (
+        <div className="w-full">
+          <img
+            className="relative inset-0 w-full h-[300px] object-cover"
+            src="https://demo.themefisher.com/constra-bootstrap/images/banner/banner1.jpg"
+          />
+          <div className="content absolute top-[40%] sm:left-[40%] left-[20%] text-white">
+            <h1 className="sm:text-4xl text-2xl font-extrabold text-center py-[10px]">
+              NEWS
+            </h1>
+            <p className="font-semibold text-center sm:text-sm text-[12px]">
+              HOME / COMPANY / ABOUT US
+            </p>
+          </div>
+        </div>
+      )}
+
+      {page == "contactPage" && (
+        <div className="w-full">
+          <img
+            className="relative inset-0 w-full h-[300px] object-cover"
+            src="https://demo.themefisher.com/constra-bootstrap/images/banner/banner1.jpg"
+          />
+          <div className="content absolute top-[40%] sm:left-[40%] left-[20%] text-white">
+            <h1 className="sm:text-4xl text-2xl font-extrabold text-center py-[10px]">
+              CONTACT
+            </h1>
+            <p className="font-semibold text-center sm:text-sm text-[12px]">
+              HOME / COMPANY / ABOUT US
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
